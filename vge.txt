@@ -1,0 +1,359 @@
+==11132== Memcheck, a memory error detector
+==11132== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==11132== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==11132== Command: ./pm7 shalv1.txt
+==11132== 
+--11132-- Valgrind options:
+--11132--    --leak-check=full
+--11132--    --show-reachable=yes
+--11132--    --track-origins=yes
+--11132--    -v
+--11132-- Contents of /proc/version:
+--11132--   Linux version 2.6.34-12-desktop (geeko@buildhost) (gcc version 4.5.0 20100604 [gcc-4_5-branch revision 160292] (SUSE Linux) ) #1 SMP PREEMPT 2010-06-29 02:39:08 +0200
+--11132-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--11132-- Page sizes: currently 4096, max supported 4096
+--11132-- Valgrind library directory: /usr/lib64/valgrind
+--11132-- Reading syms from /home/nutria/c_circus/ncur/pm7 (0x400000)
+--11132-- Reading syms from /lib64/ld-2.11.2.so (0x4000000)
+--11132-- Reading debug info from /usr/lib/debug/lib64/ld-2.11.2.so.debug ..
+--11132-- .. CRC mismatch (computed 2352942f wanted 9e7f53a5)
+--11132-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux (0x38000000)
+--11132--    object doesn't have a symbol table
+--11132--    object doesn't have a dynamic symbol table
+--11132-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+--11132-- REDIR: 0x4016370 (strlen) redirected to 0x3803fa47 (???)
+--11132-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so (0x4a21000)
+--11132--    object doesn't have a symbol table
+--11132-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so (0x4c23000)
+--11132--    object doesn't have a symbol table
+==11132== WARNING: new redirection conflicts with existing -- ignoring it
+--11132--     new: 0x04016370 (strlen              ) R-> 0x04c27370 strlen
+--11132-- REDIR: 0x4015e80 (index) redirected to 0x4c27100 (index)
+--11132-- REDIR: 0x4016030 (strcmp) redirected to 0x4c27680 (strcmp)
+--11132-- Reading syms from /lib64/libncurses.so.5.7 (0x4e2c000)
+--11132--    object doesn't have a symbol table
+--11132-- Reading syms from /lib64/libc-2.11.2.so (0x5081000)
+--11132-- Reading debug info from /usr/lib/debug/lib64/libc-2.11.2.so.debug ..
+--11132-- .. CRC mismatch (computed 84a308ad wanted 8f0b629b)
+--11132-- Reading syms from /lib64/libdl-2.11.2.so (0x53e1000)
+--11132-- Reading debug info from /usr/lib/debug/lib64/libdl-2.11.2.so.debug ..
+--11132-- .. CRC mismatch (computed 4a8641df wanted b2bd29ef)
+--11132-- REDIR: 0x50fda00 (rindex) redirected to 0x4c26f60 (rindex)
+--11132-- REDIR: 0x50f8a30 (malloc) redirected to 0x4c26bb8 (malloc)
+--11132-- REDIR: 0x50f9be0 (calloc) redirected to 0x4c255dc (calloc)
+--11132-- REDIR: 0x50f9040 (realloc) redirected to 0x4c26c69 (realloc)
+--11132-- REDIR: 0x5100810 (memcpy) redirected to 0x4c27780 (memcpy)
+--11132-- REDIR: 0x50fcc50 (strcpy) redirected to 0x4c27390 (strcpy)
+--11132-- REDIR: 0x50f8f60 (free) redirected to 0x4c25ef4 (free)
+--11132-- REDIR: 0x5102f00 (strchrnul) redirected to 0x4c28390 (strchrnul)
+--11132-- REDIR: 0x50fd690 (strlen) redirected to 0x4c27330 (strlen)
+--11132-- REDIR: 0x50fd870 (strncmp) redirected to 0x4c275b0 (strncmp)
+--11132-- REDIR: 0x50fd6e0 (strnlen) redirected to 0x4c27300 (strnlen)
+--11132-- REDIR: 0x50fc870 (index) redirected to 0x4c27000 (index)
+--11132-- REDIR: 0x50ff9e0 (mempcpy) redirected to 0x4c28480 (mempcpy)
+--11132-- REDIR: 0x50fd940 (strncpy) redirected to 0x4c27460 (strncpy)
+k: 2
+--11132-- REDIR: 0x50fc8f0 (strcmp) redirected to 0x4c27620 (strcmp)
+(B)0[?1049h[1;24r[m[4l[?25l[39;49m[39;49m[37m[40m[1;1H                                                                                [2;1H                                                                                [3;1H                                                                                [4;1H                                                                                [5;1H                                                                                [6;1H                                                                                [7;1H                                                                                [8;1H                                                                                [9;1H                                                                                [10;1H                                                                                [11;1H                                                                                [12;1H                                                                                [13;1H                                                                                [14;1H                                                                                [15;1H                                                                                [16;1H                                                                                [17;1H                                                                                [18;1H                                                                                [19;1H                                                                                [20;1H                                                                                [21;1H                                                                                [22;1H                                                                                [23;1H                                                                                [24;1H                                                                                [1@ [H[11;26H[33m[40mOn[m[39;49m[37m[40m--11132-- REDIR: 0x50feeb0 (memset) redirected to 0x4c28220 (memset)
+[33m[40m either[m[39;49m[37m[40m[33m[40m side[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m river[m[39;49m[37m[40m[33m[40m lie[m[39;49m[37m[40m[12;24H[33m[40mLong[m[39;49m[37m[40m[33m[40m fields[m[39;49m[37m[40m[33m[40m of[m[39;49m[37m[40m[33m[40m barley[m[39;49m[37m[40m[33m[40m and[m[39;49m[37m[40m[33m[40m of[m[39;49m[37m[40m[33m[40m rye,[m[39;49m[37m[40m[13;21H[33m[40mThat[m[39;49m[37m[40m[33m[40m clothe[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m wold[m[39;49m[37m[40m[33m[40m and[m[39;49m[37m[40m[33m[40m meet[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m sky;[m[39;49m[37m[40m[14;22H[33m[40mAnd[m[39;49m[37m[40m[33m[40m thro'[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m field[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m road[m[39;49m[37m[40m[33m[40m runs[m[39;49m[37m[40m[33m[40m by[m[39;49m[37m[40m[15;27H[33m[40m   To [m[39;49m[37m[40m[C[33m[40mmany-tower'd[m[39;49m[37m[40m[33m[40m Camelot;[m[39;49m[37m[40m[39;49m[37m[40m[H                                                                                [2;1H                                                                                [3;1H                                                                                [4;1H                                                                                [5;1H                                                                                [6;1H                                                                                [7;1H                                                                                [8;1H                                                                                [9;1H                                                                                [10;1H                                                                                [11;1H                                                                                [12;1H                                                                                [13;1H                                                                                [14;1H                                                                                [15;1H                                                                                [16;1H                                                                                [17;1H                                                                                [18;1H                                                                                [19;1H                                                                                [20;1H                                                                                [21;1H                                                                                [22;1H                                                                                [23;1H                                                                                [24;1H                                                                                [1@ [H[11;25H[33m[40mAnd[m[39;49m[37m[40m[33m[40m up[m[39;49m[37m[40m[33m[40m and[m[39;49m[37m[40m[33m[40m down[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m people[m[39;49m[37m[40m[33m[40m go,[m[39;49m[37m[40m[12;26H[33m[40mGazing[m[39;49m[37m[40m[33m[40m where[m[39;49m[37m[40m[33m[40m the[m[39;49m[37m[40m[33m[40m lilies[m[39;49m[37m[40m[33m[40m blow[m[39;49m[37m[40m[13;26H[33m[40mRound[m[39;49m[37m[40m[33m[40m an[m[39;49m[37m[40m[33m[40m island[m[39;49m[37m[40m[33m[40m there[m[39;49m[37m[40m[33m[40m below,[m[39;49m[37m[40m[14;28H[33m[40m   The[m[39;49m[37m[40m[33m[40m island[m[39;49m[37m[40m[33m[40m of[m[39;49m[37m[40m[33m[40m Shalott.[m[39;49m[37m[40m[39;49m[37m[40m[H                                                                                [2;1H                                                                                [3;1H                                                                                [4;1H                                                                                [5;1H                                                                                [6;1H                                                                                [7;1H                                                                                [8;1H                                                                                [9;1H                                                                                [10;1H                                                                                [11;1H                                                                                [12;1H                                                                                [13;1H                                                                                [14;1H                                                                                [15;1H                                                                                [16;1H                                                                                [17;1H                                                                                [18;1H                                                                                [19;1H                                                                                [20;1H                                                                                [21;1H                                                                                [22;1H                                                                                [23;1H                                                                                [24;1H                                                                                [1@ [H[39;49m[23B[K[24;1H[34h[?25h[?1049l[?1l>==11132== 
+==11132== HEAP SUMMARY:
+==11132==     in use at exit: 61,066 bytes in 101 blocks
+==11132==   total heap usage: 183 allocs, 82 frees, 69,074 bytes allocated
+==11132== 
+==11132== Searching for pointers to 101 not-freed blocks
+==11132== Checked 159,280 bytes
+==11132== 
+==11132== 7 bytes in 1 blocks are still reachable in loss record 1 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x50FD3D1: strdup (in /lib64/libc-2.11.2.so)
+==11132==    by 0x4E5FE40: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 8 bytes in 1 blocks are still reachable in loss record 2 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E51540: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 18 bytes in 1 blocks are still reachable in loss record 3 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E614AF: _nc_tparm_analyze (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E61649: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E62DB1: tparm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4DE5C: _nc_mvcur_init_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E8C3: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 25 bytes in 1 blocks are still reachable in loss record 4 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5D2FB: _nc_home_terminfo (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5CE66: _nc_next_db (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64DEE: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 40 bytes in 1 blocks are still reachable in loss record 5 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E64B22: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 46 bytes in 1 blocks are still reachable in loss record 6 of 32
+==11132==    at 0x4C26D32: realloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5CF4A: _nc_doalloc (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64920: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 64 bytes in 1 blocks are still reachable in loss record 7 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E649FF: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 66 bytes in 1 blocks are still reachable in loss record 8 of 32
+==11132==    at 0x4C26D32: realloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5CF4A: _nc_doalloc (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E629A8: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E62DB1: tparm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4DE5C: _nc_mvcur_init_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E8C3: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 78 bytes in 1 blocks are still reachable in loss record 9 of 32
+==11132==    at 0x4C26D32: realloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5CF4A: _nc_doalloc (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64936: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 96 bytes in 1 blocks are still reachable in loss record 10 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E443EF: _nc_scroll_optimize_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E59288: doupdate_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E50278: wrefresh (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4018AF: print_in_middle (pm7.c:255)
+==11132==    by 0x401B7B: main (pm7.c:313)
+==11132== 
+==11132== 112 bytes in 1 blocks are still reachable in loss record 11 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDB3: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51993: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 112 bytes in 1 blocks are still reachable in loss record 12 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDB3: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E519B5: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 112 bytes in 1 blocks are still reachable in loss record 13 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDB3: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51B07: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 128 bytes in 1 blocks are still reachable in loss record 14 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5150D: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 128 bytes in 1 blocks are still reachable in loss record 15 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E47606: start_color_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401AB8: main (pm7.c:304)
+==11132== 
+==11132== 192 bytes in 1 blocks are still reachable in loss record 16 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4513E: _nc_hash_map_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E44411: _nc_scroll_optimize_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E59288: doupdate_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E50278: wrefresh (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4018AF: print_in_middle (pm7.c:255)
+==11132==    by 0x401B7B: main (pm7.c:313)
+==11132== 
+==11132== 192 bytes in 1 blocks are still reachable in loss record 17 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4525C: _nc_hash_map_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E44411: _nc_scroll_optimize_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E59288: doupdate_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E50278: wrefresh (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4018AF: print_in_middle (pm7.c:255)
+==11132==    by 0x401B7B: main (pm7.c:313)
+==11132== 
+==11132== 208 bytes in 1 blocks are still reachable in loss record 18 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5FDD5: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 324 bytes in 1 blocks are still reachable in loss record 19 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E475E6: start_color_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401AB8: main (pm7.c:304)
+==11132== 
+==11132== 384 bytes in 1 blocks are still reachable in loss record 20 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDC7: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51993: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 384 bytes in 1 blocks are still reachable in loss record 21 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDC7: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E519B5: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 384 bytes in 1 blocks are still reachable in loss record 22 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4EDC7: _nc_makenew_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4F19D: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51B07: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 661 bytes in 1 blocks are still reachable in loss record 23 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E64443: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 1,024 bytes in 1 blocks are still reachable in loss record 24 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E514EE: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 1,200 bytes in 1 blocks are still reachable in loss record 25 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E44DE4: _nc_hash_map_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E44411: _nc_scroll_optimize_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E59288: doupdate_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E50278: wrefresh (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4018AF: print_in_middle (pm7.c:255)
+==11132==    by 0x401B7B: main (pm7.c:313)
+==11132== 
+==11132== 1,624 bytes in 1 blocks are still reachable in loss record 26 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E60136: new_prescr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4EB5C: newterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 1,945 bytes in 1 blocks are still reachable in loss record 27 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E547C4: _nc_printf_string_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4FBFE: vwprintw (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4FCE8: mvwprintw (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401745: print_in_middle (pm7.c:242)
+==11132==    by 0x401B7B: main (pm7.c:313)
+==11132== 
+==11132== 2,064 bytes in 1 blocks are still reachable in loss record 28 of 32
+==11132==    at 0x4C26C3A: malloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E64F4E: _nc_set_buffer_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E515B1: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 3,360 bytes in 1 blocks are still reachable in loss record 29 of 32
+==11132==    at 0x4C26D32: realloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E5CF4A: _nc_doalloc (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64950: _nc_read_termtype (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64C5D: _nc_read_file_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E64E3D: _nc_read_entry (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5F728: ??? (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E5FDEF: _nc_setupterm (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E72C: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 15,360 bytes in 24 blocks are still reachable in loss record 30 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4F1CC: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51993: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 15,360 bytes in 24 blocks are still reachable in loss record 31 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4F1CC: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E519B5: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== 15,360 bytes in 24 blocks are still reachable in loss record 32 of 32
+==11132==    at 0x4C2568A: calloc (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11132==    by 0x4E4F1CC: newwin_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E51B07: _nc_setupscreen_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4E76F: newterm_sp (in /lib64/libncurses.so.5.7)
+==11132==    by 0x4E4B491: initscr (in /lib64/libncurses.so.5.7)
+==11132==    by 0x401A35: main (pm7.c:290)
+==11132== 
+==11132== LEAK SUMMARY:
+==11132==    definitely lost: 0 bytes in 0 blocks
+==11132==    indirectly lost: 0 bytes in 0 blocks
+==11132==      possibly lost: 0 bytes in 0 blocks
+==11132==    still reachable: 61,066 bytes in 101 blocks
+==11132==         suppressed: 0 bytes in 0 blocks
+==11132== 
+==11132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--11132-- 
+--11132-- used_suppression:      2 dl-hack3-cond-1
+==11132== 
+==11132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)

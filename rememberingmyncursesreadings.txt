@@ -1,0 +1,21 @@
+
+ncurses interacts eavily with the terminal, as you might expect.
+terminals the world over buffer any characters that are beng pressed into a line buffer adn none of it at all is written out to screen unless a return is pressed.
+
+this is often a nuisance. the way around it with ncurses is the "raw()" call.
+
+getch();
+--------
+now this requests _any_ character from the user: essentially, a keypress.
+Often uses to hold onto current screen until next key is pressed.
+
+clear();
+--------
+this will clear the screen. This is actually more or less essential unless you want some remanants of the previous screen staying on.
+
+refresh():
+----------
+not sure of the utility of this. In the beginning I tought it might clear screen, but obviously, cler() does that.
+OK, I think I know. It's to be used in connection with any "painting" because what you do is "Paint the buffer"
+and you need to update the screen, which is what refresh() is
+
